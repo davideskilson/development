@@ -178,110 +178,119 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Book Favoriting</h1>
-      <div id="favorites">
-        <h2>Favorites</h2>
-        <div id="favoritesList">{showBooks()}</div>
-      </div>
-      <div id="bookListWrapper">
-        <h2>List of Books</h2>
-        <div id="filtersSortButtons">
-          <div id="filtersAndSort">
-            <div id="filters">
-              <div className="aFiltering">
-                <label>
-                  <p>
-                    <b>Filter:</b> only see books belonging to the chosen genre:
-                  </p>
-                  <select
-                    value={filterFeatures[0]}
-                    onChange={handleChangeGenre}
-                  >
-                    <option value="All">All</option>
-                    <option value="Historical Fiction">
-                      Historical Fiction
-                    </option>
-                    <option value="Mystery">Mystery</option>
-                    <option value="Family Saga">Family Saga</option>
-                    <option value="Fantasy">Fantasy</option>
-                    <option value="Adventure">Adventure</option>
-                    <option value="Thriller">Thriller</option>
-                    <option value="Children's Fiction">
-                      Children's Fiction
-                    </option>
-                  </select>
-                  {filterFeatures[0] === "All" ? (
-                    <p>All genres of books included</p>
-                  ) : (
-                    <p>Filtering to only include {filterFeatures[0]} books</p>
-                  )}
-                </label>
+      <section aria-label="title">
+        <div role="banner">
+          <h1>Book Favoriting</h1>
+        </div>
+      </section>
+      <section role="main" aria-label="favorite books list">
+        <div role="main" id="favorites">
+          <h2>Favorites</h2>
+          <div id="favoritesList">{showBooks()}</div>
+        </div>
+      </section>
+      <section role="main" aria-label="list of books">
+        <div role="main" id="bookListWrapper">
+          <h2>List of Books</h2>
+          <div id="filtersSortButtons">
+            <div id="filtersAndSort">
+              <div id="filters">
+                <div className="aFiltering">
+                  <label>
+                    <p>
+                      <b>Filter:</b> only see books belonging to the chosen
+                      genre:
+                    </p>
+                    <select
+                      value={filterFeatures[0]}
+                      onChange={handleChangeGenre}
+                    >
+                      <option value="All">All</option>
+                      <option value="Historical Fiction">
+                        Historical Fiction
+                      </option>
+                      <option value="Mystery">Mystery</option>
+                      <option value="Family Saga">Family Saga</option>
+                      <option value="Fantasy">Fantasy</option>
+                      <option value="Adventure">Adventure</option>
+                      <option value="Thriller">Thriller</option>
+                      <option value="Children's Fiction">
+                        Children's Fiction
+                      </option>
+                    </select>
+                    {filterFeatures[0] === "All" ? (
+                      <p>All genres of books included</p>
+                    ) : (
+                      <p>Filtering to only include {filterFeatures[0]} books</p>
+                    )}
+                  </label>
+                </div>
+                <div className="aFiltering">
+                  <label>
+                    <p>
+                      <b>Filter:</b> only see books by the chosen author
+                    </p>
+                    <select
+                      value={filterFeatures[1]}
+                      onChange={handleChangeAuthor}
+                    >
+                      <option value="All">All</option>
+                      <option value="Charles Dickens">Charles Dickens</option>
+                      <option value="Agatha Christie">Agatha Christie</option>
+                      <option value="Cao Xueqin">Cao Xueqin</option>
+                      <option value="J. K. Rowling">J. K. Rowling</option>
+                      <option value="Paulo Coelho">Paulo Coelho</option>
+                      <option value="J. R. R. Tolkien">J. R. R. Tolkien</option>
+                      <option value="Antoine de Saint-Exupéry">
+                        Antoine de Saint-Exupéry
+                      </option>
+                      <option value="H. Rider Haggard">H. Rider Haggard</option>
+                      <option value="Dan Brown">Dan Brown</option>{" "}
+                    </select>
+                    {filterFeatures[1] === "All" ? (
+                      <p>Books written by all authors included</p>
+                    ) : (
+                      <p>
+                        Filtering to only include books by {filterFeatures[1]}
+                      </p>
+                    )}
+                  </label>
+                </div>
               </div>
-              <div className="aFiltering">
+              <div className="aSorting">
                 <label>
                   <p>
-                    <b>Filter:</b> only see books by the chosen author
+                    <b>Sort:</b> as you scroll down, have the word counts of the
+                    books be in increasing or decresing order.
                   </p>
-                  <select
-                    value={filterFeatures[1]}
-                    onChange={handleChangeAuthor}
-                  >
-                    <option value="All">All</option>
-                    <option value="Charles Dickens">Charles Dickens</option>
-                    <option value="Agatha Christie">Agatha Christie</option>
-                    <option value="Cao Xueqin">Cao Xueqin</option>
-                    <option value="J. K. Rowling">J. K. Rowling</option>
-                    <option value="Paulo Coelho">Paulo Coelho</option>
-                    <option value="J. R. R. Tolkien">J. R. R. Tolkien</option>
-                    <option value="Antoine de Saint-Exupéry">
-                      Antoine de Saint-Exupéry
-                    </option>
-                    <option value="H. Rider Haggard">H. Rider Haggard</option>
-                    <option value="Dan Brown">Dan Brown</option>{" "}
+                  <select value={sort} onChange={handleChangeSort}>
+                    <option value="No Sorting">No Sorting</option>
+                    <option value="increasing">Increasing</option>
+                    <option value="decreasing">Decreasing</option>
                   </select>
-                  {filterFeatures[1] === "All" ? (
-                    <p>Books written by all authors included</p>
+                  {sort === "No Sorting" ? (
+                    <p>No sorting applied to the books</p>
                   ) : (
                     <p>
-                      Filtering to only include books by {filterFeatures[1]}
+                      Sorting books to have {sort} word counts as you scroll
+                      down the page
                     </p>
                   )}
                 </label>
               </div>
             </div>
-            <div className="aSorting">
-              <label>
-                <p>
-                  <b>Sort:</b> as you scroll down, have the word counts of the
-                  books be in increasing or decresing order.
-                </p>
-                <select value={sort} onChange={handleChangeSort}>
-                  <option value="No Sorting">No Sorting</option>
-                  <option value="increasing">Increasing</option>
-                  <option value="decreasing">Decreasing</option>
-                </select>
-                {sort === "No Sorting" ? (
-                  <p>No sorting applied to the books</p>
-                ) : (
-                  <p>
-                    Sorting books to have {sort} word counts as you scroll down
-                    the page
-                  </p>
-                )}
-              </label>
-            </div>
+            <button
+              onClick={(event) => {
+                setFilterFeatures(["All", "All"]);
+                setSort("No Sorting");
+              }}
+            >
+              Reset all Filtering and Sorting
+            </button>
           </div>
-          <button
-            onClick={(event) => {
-              setFilterFeatures(["All", "All"]);
-              setSort("No Sorting");
-            }}
-          >
-            Reset all Filtering and Sorting
-          </button>
+          <div id="bookList">{buildElements()}</div>
         </div>
-        <div id="bookList">{buildElements()}</div>
-      </div>
+      </section>
     </div>
   );
 }

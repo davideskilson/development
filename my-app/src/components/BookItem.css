@@ -13,7 +13,7 @@ img {
   margin: 30px;
   flex-direction: column;
   border-radius: 20px;
-  height: 550px;
+  height: 600px;
   justify-content: space-around;
 }
 
@@ -21,7 +21,7 @@ button {
   margin: 8px;
   padding: 16px;
   max-width: 200px;
-  background-color: rgb(11, 113, 214);
+  background-color: rgb(9, 102, 206);
   color: rgb(252, 226, 226);
   border: none;
   border-radius: 5px;
