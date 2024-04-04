@@ -1,7 +1,7 @@
 import "./BookItem.css";
 
 export default function BookItem(props) {
-  const alt = "The book" + props.item.title;
+  const alt = "The book " + props.item.title;
   let isFavorite;
   if (props.favorites) {
     isFavorite = props.favorites.includes(props.item.title);
