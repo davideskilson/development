@@ -1,0 +1,38 @@
+.BookItem {
+}
+
+img {
+  max-width: 300px;
+  object-fit: contain;
+  align-self: center;
+}
+
+.book {
+  display: flex;
+  width: 400px;
+  padding: 30px;
+  text-align: left;
+  background-color: aliceblue;
+  margin: 30px;
+  flex-direction: column;
+  border-radius: 20px;
+  height: 550px;
+  justify-content: space-around;
+}
+
+button {
+  margin: 8px;
+  padding: 16px;
+  max-width: 200px;
+  background-color: rgb(11, 113, 214);
+  color: rgb(252, 226, 226);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 24px;
+}
