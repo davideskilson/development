@@ -1,38 +1,104 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  background-color: bisque;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#bookListWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#bookList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#favorites {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+  max-width: 400px;
+}
+
+#favoritesList {
+  background-color: rgb(204, 215, 210);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#filtersAndSort {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.aFiltering {
+  padding: 0 30px;
+  margin: 30px;
+  background-color: rgb(157, 230, 185);
+  border-radius: 20px;
+  font-family: "Lato", sans-serif;
+  font-size: 30;
+  width: 350px;
+}
+
+.aSorting {
+  padding: 0 30px;
+  margin: 30px;
+  background-color: rgb(110, 213, 222);
+  border-radius: 20px;
+  font-family: "Lato", sans-serif;
+  font-size: 30;
+  width: 500px;
+}
+
+#filtersSortButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 50px;
+  color: rgb(4, 129, 129);
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  font-size: 40px;
+  color: rgb(4, 129, 129);
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+}
+
+select {
+  font-size: 20px;
+  background-color: rgb(243, 232, 216);
+  border: rgb(4, 129, 129);
+  border: 6px solid transparent;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
 }
