@@ -2,7 +2,7 @@
 
 ## Deployed App
 
-Here is a link to my deployed React app, running on Vercel: [Link](https://pages.github.com/blahblahblah)
+Here is a link to my deployed React app, running on Vercel: [Link](https://development-black.vercel.app/)
 
 ## Instructions for Locally Running
 
@@ -10,7 +10,7 @@ Here is a link to my deployed React app, running on Vercel: [Link](https://pages
 In the `my-app/` directory, you can run:
 
 ```sh
-  npm test
+  npm start
 ```
 
 This runs the app in the development mode.\
