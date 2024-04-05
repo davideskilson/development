@@ -14,12 +14,12 @@ In the `my-app/` directory, you can run:
 ```
 
 This runs the app in the development mode.\
-You can open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You can open [`http://localhost:3000`](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-Additionally, you can press ctrl + C in order to stop running locally.
+Additionally, you can press `ctrl + C` in order to stop running locally.
 
 ## Known Bugs
 

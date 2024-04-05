@@ -261,7 +261,7 @@ function App() {
                 <label>
                   <p>
                     <b>Sort:</b> as you scroll down, have the word counts of the
-                    books be in increasing or decresing order.
+                    books be in increasing or decreasing order.
                   </p>
                   <select value={sort} onChange={handleChangeSort}>
                     <option value="No Sorting">No Sorting</option>
