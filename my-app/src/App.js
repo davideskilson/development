@@ -68,7 +68,9 @@ function App() {
     } else if (sort === "decreasing") {
       jsxlist = data_copy
         .sort(
-          (el_1, el_2) => parseInt(el_2.word_count) - parseInt(el_1.word_count)
+          (el_1, el_2) =>
+            parseInt(el_2.word_count.replace(/,/g, "")) -
+            parseInt(el_1.word_count.replace(/,/g, ""))
         )
         .map((item, index) => {
           return (
